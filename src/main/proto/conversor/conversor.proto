@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+        package conversor;
+
+        option java_package = "com.proto.conversor";
+        option java_multiple_files = true;
+
+
+
+//service para conversão
+service APIservice{
+  rpc match(APIRequest) returns(APIResponse);
+}
+
+//jogada player
+message APIRequest {
+    string mao = 1;
+}
+
+//resposta vencedor
+message APIResponse {
+    string response = 1;
+}
